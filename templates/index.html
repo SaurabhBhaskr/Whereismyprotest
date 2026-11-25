@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Whereismyprotest | Discover Protests</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            ✊ Whereismyprotest
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="#explore">Explore Protests</a>
+            <a href="#about">About</a>
+        </div>
+
+        <a href="{{ url_for('submit_protest') }}" class="nav-button">
+            + Submit Protest
+        </a>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <p class="eyebrow">YOUR VOICE. YOUR MOVEMENT.</p>
+
+        <h1>
+            Discover Protests<br>
+            <span>Across India.</span>
+        </h1>
+
+        <p class="hero-description">
+            Find upcoming demonstrations, explore causes
+            and discover movements happening around you.
+        </p>
+
+        <a href="#explore" class="primary-button">
+            Explore Upcoming Protests →
+        </a>
+    </section>
+
+
+    <!-- Statistics -->
+    <section class="stats">
+
+        <div class="stat-card">
+            <h2>24</h2>
+            <p>Upcoming Protests</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>120</h2>
+            <p>Total Events</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>98</h2>
+            <p>Verified Events</p>
+        </div>
+
+        <div class="stat-card">
+            <h2>12</h2>
+            <p>Pending Verification</p>
+        </div>
+
+    </section>
+
+
+    <!-- Upcoming Protests -->
+
+    <!-- Main Dashboard -->
+
+    <section class="dashboard" id="explore">
+
+        <!-- LEFT SIDEBAR -->
+        <aside class="filter-sidebar">
+
+            <h3>Filter Protests</h3>
+
+            <div class="filter-group">
+                <label>Location</label>
+                <select id="locationFilter">
+                    <option value="">All Locations</option>
+                    <option value="new delhi">New Delhi</option>
+                    <option value="mumbai">Mumbai</option>
+                    <option value="patna">Patna</option>
+                    <option value="bengaluru">Bengaluru</option>
+                    <option value="gaya">Gaya</option>
+                    <option value="chhapra">Chhapra</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Category</label>
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="education">Education</option>
+                    <option value="environment">Environment</option>
+                    <option value="workers">Workers' Rights</option>
+                    <option value="farmers">Farmers' Rights</option>
+                    <option value="social">Social Justice</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Event Status</label>
+                <select id="statusFilter">
+                    <option value="">All Events</option>
+                    <option value="verified">Verified</option>
+                    <option value="pending">Pending Verification</option>
+                </select>
+            </div>
+
+            <div class="filter-note">
+                Find demonstrations by location,
+                cause and verification status.
+            </div>
+
+        </aside>
+
+
+        <!-- MIDDLE CONTENT -->
+        <main class="event-feed">
+
+            <div class="feed-heading">
+                <div>
+                    <p class="eyebrow">DISCOVER MOVEMENTS</p>
+                    <h2>Upcoming Protests</h2>
+                </div>
+
+                <span class="event-count">24 Events</span>
+            </div>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search protests, causes or locations..." />
+            </div>
+
+            <!-- Protest 1 -->
+            <article class="event-card" data-location="new delhi" data-category="education" data-status="verified">
+
+                <div class="event-date">
+                    <span>DEC</span>
+                    <strong>12</strong>
+                </div>
+
+                <div class="event-info">
+
+                    <span class="category">EDUCATION</span>
+
+                    <h3>Students' March for Education Rights</h3>
+
+                    <p>📍 India Gate, New Delhi</p>
+                    <p>🕒 10:00 AM</p>
+
+                    <span class="verified">
+                        ✓ Verified Event
+                    </span>
+
+                </div>
+
+                <a href="#" class="details-button">
+                    View Details →
+                </a>
+
+            </article>
+
+
+            <!-- Protest 2 -->
+            <article class="event-card" data-location="new delhi" data-category="environment" data-status="verified">
+
+                <div class="event-date">
+                    <span>DEC</span>
+                    <strong>18</strong>
+                </div>
+
+                <div class="event-info">
+
+                    <span class="category">ENVIRONMENT</span>
+
+                    <h3>Climate Action Public Demonstration</h3>
+
+                    <p>📍 Jantar Mantar, New Delhi</p>
+                    <p>🕒 11:00 AM</p>
+
+                    <span class="verified">
+                        ✓ Verified Event
+                    </span>
+
+                </div>
+
+                <a href="#" class="details-button">
+                    View Details →
+                </a>
+
+            </article>
+
+
+            <!-- Protest 3 -->
+            <article class="event-card" data-location="patna" data-category="workers" data-status="verified">
+
+                <div class="event-date">
+                    <span>DEC</span>
+                    <strong>22</strong>
+                </div>
+
+                <div class="event-info">
+
+                    <span class="category">WORKERS' RIGHTS</span>
+
+                    <h3>Workers' Rights Awareness Demonstration</h3>
+
+                    <p>📍 Gandhi Maidan, Patna</p>
+                    <p>🕒 09:00 AM</p>
+
+                    <span class="verified">
+                        ✓ Verified Event
+                    </span>
+<div class="event-extra-info">
+    <p>
+        A demonstration focused on workers' rights,
+        fair wages and better working conditions.
+    </p>
+
+    <p>📍 Gandhi Maidan, Patna</p>
+    <p>📅 December 22 (sample event)</p>
+
+    <a href="{{ url_for('event_details') }}"
+       class="details-button">
+        Explore Protest →
+    </a>
+</div>
+                </div>
+
+                <a href="{{ url_for('event_details') }}" class="details-button">
+                    View Details →
+                </a>
+            </article>
+
+            <!-- Protest 4 - Chhapra -->
+            <article class="event-card" data-location="chhapra" data-category="education" data-status="pending">
+
+                <div class="event-date">
+                    <span>TBA</span>
+                    <strong>--</strong>
+                </div>
+
+                <div class="event-info">
+
+                    <span class="category">EDUCATION</span>
+
+                    <h3>Principal Removal Protest</h3>
+
+                    <p>📍 Loknayak Jai Prakash Institute of Technology, Chhapra</p>
+                    <p>🕒 Date and time to be announced</p>
+
+                    <span class="pending">
+                        ! Awaiting Verification
+                    </span>
+
+                </div>
+
+                <a href="#" class="details-button">
+                    View Details →
+                </a>
+
+            </article>
+
+
+            <p id="noResults" class="no-results" hidden>
+                No protests found matching your search.
+            </p>
+        </main>
+
+
+        <!-- RIGHT SIDEBAR -->
+        <aside class="community-sidebar">
+
+            <div class="submit-card">
+
+                <span class="submit-icon">✊</span>
+
+                <h3>Know About a Protest?</h3>
+
+                <p>
+                    Help others discover upcoming
+                    demonstrations in their communities.
+                </p>
+
+                <a href="{{ url_for('submit_protest') }}" class="submit-link">
+                    + Submit a Protest
+                </a>
+
+            </div>
+
+
+            <div class="verification-card">
+
+                <h3>Our Verification Process</h3>
+
+                <p>
+                    Every submitted event goes through
+                    an admin review before appearing
+                    as a verified event.
+                </p>
+
+                <span>✓ Evidence-based verification</span>
+
+                <span>✓ Source transparency</span>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+
+
+    <footer id="about">
+        <p>© 2026 Whereismyprotest. All rights reserved.</p>
+
+        <p class="creator-credit">
+            An idea imagined and developed by
+            <span>Saurabh Bhaskar and Team</span> ❤️
+        </p>
+
+        <p>Discover. Participate. Make your voice heard.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protest Details | Whereismyprotest</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">✊ Whereismyprotest</div>
+
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}">Explore Protests</a>
+            <a href="{{ url_for('home') }}#about">About</a>
+        </div>
+
+        <a href="{{ url_for('home') }}" class="nav-button">
+            Back to Protests
+        </a>
+    </nav>
+
+    <!-- Details Page -->
+    <section class="protest-details-page">
+
+        <a href="{{ url_for('home') }}" class="back-link">
+            ← Back to all protests
+        </a>
+
+        <div class="details-main-card">
+
+            <span class="details-category">
+                WORKERS' RIGHTS
+            </span>
+
+            <h1>Workers' Rights Awareness Demonstration</h1>
+
+            <p class="details-description">
+                A demonstration focused on raising awareness
+                about workers' rights and improving working
+                conditions.
+            </p>
+
+            <div class="details-divider"></div>
+
+            <div class="details-information">
+
+                <div class="detail-item">
+                    <span>📍 Location</span>
+                    <strong>Gandhi Maidan, Patna</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>📅 Date</span>
+                    <strong>December 22 (sample event)</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>🕒 Time</span>
+                    <strong>09:00 AM (sample event)</strong>
+                </div>
+
+                <div class="detail-item">
+                    <span>✓ Verification</span>
+                    <strong class="details-verified">
+                        Verified in sample data
+                    </strong>
+                </div>
+
+            </div>
+
+            <div class="details-divider"></div>
+
+            <h2>About this demonstration</h2>
+
+            <p class="details-description">
+                This is demonstration content for the
+                Whereismyprotest project. Detailed information,
+                organiser details and supporting sources will
+                be displayed here once real event data is
+                connected to the platform.
+            </p>
+
+            <div class="details-notice">
+                This is a sample event, not a confirmed
+                public announcement.
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer id="about">
+        <p>© 2026 Whereismyprotest. All rights reserved.</p>
+
+        <p class="creator-credit">
+            An idea imagined and developed by
+            <span>Saurabh Bhaskar and Team</span> ❤️
+        </p>
+
+        <p>Discover. Participate. Make your voice heard.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ protest.title }} | Whereismyprotest</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/protest-details.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <a class="logo" href="/">✊ Whereismyprotest</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/#explore">Explore Protests</a>
+            <a href="/#about">About</a>
+        </div>
+        <a href="/#submit" class="nav-button">+ Submit Protest</a>
+    </nav>
+
+    <main class="details-page">
+        <a class="back-link" href="/#explore">← Back to protests</a>
+
+        <header class="details-heading">
+            <p class="eyebrow">PROTEST DETAILS</p>
+            <div class="details-title-row">
+                <div>
+                    <span class="category">{{ protest.category }}</span>
+                    <h1>{{ protest.title }}</h1>
+                </div>
+                <span class="details-status {{ 'is-verified' if protest.verified else 'is-pending' }}">
+                    {{ '✓' if protest.verified else '!' }} {{ protest.status }}
+                </span>
+            </div>
+            <p class="details-intro">Event information and verification status for this community demonstration.</p>
+        </header>
+
+        <section class="details-layout" aria-label="Protest information">
+            <div class="details-main-card">
+                <h2>Event information</h2>
+                <dl class="details-list">
+                    <div class="detail-row">
+                        <dt>Date</dt>
+                        <dd>{{ protest.date }}</dd>
+                    </div>
+                    <div class="detail-row">
+                        <dt>Time</dt>
+                        <dd>{{ protest.time }}</dd>
+                    </div>
+                    <div class="detail-row">
+                        <dt>Location</dt>
+                        <dd>{{ protest.location }}</dd>
+                    </div>
+                    <div class="detail-row">
+                        <dt>Category</dt>
+                        <dd>{{ protest.category }}</dd>
+                    </div>
+                </dl>
+            </div>
+
+            <aside class="details-side-card">
+                <h2>Verification</h2>
+                <p>Submitted events are reviewed before they are marked as verified.</p>
+                <span class="verification-line">✓ Evidence-based verification</span>
+                <span class="verification-line">✓ Source transparency</span>
+                <a class="details-action" href="/#explore">Browse other protests</a>
+            </aside>
+        </section>
+    </main>
+
+    <footer id="about">
+        <p>© 2026 Whereismyprotest. All rights reserved.</p>
+        <p class="creator-credit">An idea imagined and developed by <span>Saurabh Bhaskar</span> ❤️</p>
+        <p>Discover. Participate. Make your voice heard.</p>
+    </footer>
+</body>
+</html>

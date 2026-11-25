@@ -1,0 +1,991 @@
+
+/* 1. Global settings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111315;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+
+/* 2. Navigation */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 8%;
+    border-bottom: 1px solid #292c30;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #b7b7b7;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #ff4545;
+}
+
+.nav-button {
+    background: #e63946;
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 7px;
+}
+
+
+/* 3. Hero section */
+
+.hero {
+    padding: 85px 8%;
+    background:
+        radial-gradient(ellipse at 80% 50%, #482124 0%, transparent 55%),
+        #17191c;
+}
+
+.eyebrow {
+    color: #ff5252;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #ef4444;
+}
+
+.hero-description {
+    color: #b5b5b5;
+    max-width: 500px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.primary-button {
+    display: inline-block;
+    background: #e63946;
+    color: white;
+    padding: 15px 22px;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+
+/* 4. Statistics */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 35px 8%;
+}
+
+.stat-card {
+    background: #1c1f23;
+    border: 1px solid #30343a;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.stat-card h2 {
+    color: #ff5252;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.stat-card p {
+    color: #aaaaaa;
+    font-size: 14px;
+}
+
+
+/* 5. Upcoming protests */
+
+.protests {
+    padding: 45px 8%;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.section-heading h2 {
+    font-size: 28px;
+}
+
+.section-heading a {
+    color: #ff5252;
+    text-decoration: none;
+}
+
+.protest-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background: #1c1f23;
+    border: 1px solid #30343a;
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 16px;
+}
+
+.event-date {
+    background: #302124;
+    color: #ff6666;
+    border-radius: 8px;
+    padding: 15px 22px;
+    text-align: center;
+}
+
+.event-date span {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.event-date strong {
+    font-size: 30px;
+}
+
+.event-info {
+    flex: 1;
+}
+
+.category {
+    color: #ff6666;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.event-info h3 {
+    margin: 9px 0;
+}
+
+.event-info p {
+    color: #aaaaaa;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.separator {
+    margin: 0 8px;
+}
+
+.verified {
+    color: #54cf91;
+    font-size: 12px;
+}
+
+.details-button {
+    color: white;
+    text-decoration: none;
+    border: 1px solid #555;
+    padding: 11px 15px;
+    border-radius: 6px;
+}
+
+
+/* 6. Footer */
+
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #888888;
+    border-top: 1px solid #292c30;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.creator-credit {
+    margin: 8px 0;
+    color: #bbbbbb;
+}
+
+.creator-credit span {
+    color: #ff5252;
+    font-weight: bold;
+}
+
+
+/* 7. Responsive design */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .protest-card {
+        flex-wrap: wrap;
+    }
+
+    .details-button {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 22px;
+    }
+}
+
+
+/* DASHBOARD LAYOUT */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr) 240px;
+    gap: 24px;
+    padding: 40px 8%;
+    align-items: start;
+}
+
+
+/* LEFT FILTER SIDEBAR */
+
+.filter-sidebar,
+.community-sidebar > div {
+    background: #1c1f23;
+    border: 1px solid #30343a;
+    border-radius: 10px;
+    padding: 22px;
+}
+
+.filter-sidebar h3 {
+    margin-bottom: 25px;
+}
+
+.filter-group {
+    margin-bottom: 22px;
+}
+
+.filter-group label {
+    display: block;
+    color: #bbbbbb;
+    font-size: 13px;
+    margin-bottom: 9px;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 11px;
+    background: #292d33;
+    border: 1px solid #41464e;
+    color: white;
+    border-radius: 6px;
+}
+
+.filter-note {
+    color: #888888;
+    font-size: 12px;
+    line-height: 1.7;
+    border-top: 1px solid #30343a;
+    padding-top: 18px;
+}
+
+
+/* MIDDLE EVENT FEED */
+
+.feed-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    gap: 10px;
+}
+
+.feed-heading h2 {
+    font-size: 26px;
+}
+
+.event-count {
+    color: #ff6666;
+    font-size: 12px;
+    background: #302124;
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+.event-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: #1c1f23;
+    border: 1px solid #30343a;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+.event-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.event-info h3 {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.event-info p {
+    color: #aaaaaa;
+    font-size: 12px;
+    margin: 7px 0;
+}
+
+.event-date {
+    flex-shrink: 0;
+}
+
+
+/* RIGHT COMMUNITY SIDEBAR */
+
+.community-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.submit-card {
+    background: linear-gradient(145deg, #452126, #242024) !important;
+}
+
+.submit-icon {
+    font-size: 30px;
+}
+
+.submit-card h3,
+.verification-card h3 {
+    margin: 14px 0;
+}
+
+.submit-card p,
+.verification-card p {
+    color: #bbbbbb;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.submit-link {
+    display: block;
+    text-align: center;
+    background: #e63946;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.verification-card span {
+    display: block;
+    color: #54cf91;
+    font-size: 11px;
+    margin-top: 12px;
+}
+
+
+/* RESPONSIVE DASHBOARD */
+
+@media (max-width: 1100px) {
+
+    .dashboard {
+        grid-template-columns: 200px minmax(0, 1fr);
+    }
+
+    .community-sidebar {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+        padding: 25px 5%;
+    }
+
+    .community-sidebar {
+        grid-column: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .event-card {
+        flex-wrap: wrap;
+    }
+
+    .event-info {
+        flex-basis: 60%;
+    }
+
+    .details-button {
+        margin-left: auto;
+    }
+}
+
+/* SEARCH BOX */
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px 16px;
+    background: #1c1f23;
+    border: 1px solid #30343a;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #e63946;
+}
+
+.search-box input::placeholder {
+    color: #888888;
+}
+
+.no-results {
+    color: #bbbbbb;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+
+/* Chhapra card content */
+.event-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.event-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.event-category {
+    color: #ff5252;
+    background: rgba(255, 82, 82, 0.12);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.event-status {
+    color: #ffc107;
+    background: rgba(255, 193, 7, 0.12);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.event-content h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.event-content p {
+    color: #aaaaaa;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.event-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #999999;
+    font-size: 13px;
+}
+
+.view-details {
+    display: inline-block;
+    margin-top: 14px;
+    color: #ff5252;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.view-details:hover {
+    color: #ff7777;
+}
+/* Pending event status */
+.pending {
+    display: inline-block;
+    color: #ffc107;
+    background: rgba(255, 193, 7, 0.10);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* PROTEST DETAILS PAGE */
+
+.protest-details-page {
+    padding: 45px 8%;
+    min-height: 70vh;
+}
+
+.back-link {
+    display: inline-block;
+    color: #ff6666;
+    text-decoration: none;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    color: #ffffff;
+}
+
+.details-main-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #1c1f23;
+    border: 1px solid #30343a;
+    border-radius: 12px;
+    padding: 35px;
+}
+
+.details-category {
+    display: inline-block;
+    color: #ff6666;
+    background: #302124;
+    padding: 7px 12px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+.details-main-card h1 {
+    font-size: 32px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.details-description {
+    color: #aaaaaa;
+    font-size: 14px;
+    line-height: 1.9;
+    margin: 15px 0;
+}
+
+.details-divider {
+    border-top: 1px solid #30343a;
+    margin: 28px 0;
+}
+
+.details-information {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.detail-item span {
+    color: #999999;
+    font-size: 13px;
+}
+
+.detail-item strong {
+    color: #f5f5f5;
+    font-size: 14px;
+}
+
+.detail-item .details-verified {
+    color: #54cf91;
+}
+
+.details-main-card h2 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.details-notice {
+    background: #302124;
+    border-left: 3px solid #e63946;
+    padding: 15px;
+    color: #ffaaaa;
+    font-size: 13px;
+    line-height: 1.7;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+
+@media (max-width: 650px) {
+    .protest-details-page {
+        padding: 25px 5%;
+    }
+
+    .details-main-card {
+        padding: 22px;
+    }
+
+    .details-main-card h1 {
+        font-size: 25px;
+    }
+
+    .details-information {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* SMOOTH EXPANDING PROTEST CARDS */
+
+.event-card[data-category="workers"] {
+    position: relative;
+    transform: scale(1);
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease,
+                border-color 0.35s ease;
+}
+
+/* Extra information hidden initially */
+.event-extra-info {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin-top: 0;
+
+    transition: max-height 0.4s ease,
+                opacity 0.3s ease,
+                margin-top 0.3s ease;
+}
+
+/* Reveal information on hover */
+.event-card[data-category="workers"]:hover .event-extra-info,
+.event-card[data-category="workers"]:focus-within .event-extra-info {
+    max-height: 220px;
+    opacity: 1;
+    margin-top: 15px;
+}
+
+/* Smooth card enlargement */
+.event-card[data-category="workers"]:hover,
+.event-card[data-category="workers"]:focus-within {
+    transform: scale(1.025);
+    z-index: 10;
+    border-color: #e63946;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Extra information styling */
+.event-extra-info p {
+    color: #bbbbbb;
+    font-size: 13px;
+    line-height: 1.7;
+    margin-bottom: 9px;
+}
+
+.event-extra-info .details-button {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .event-card[data-category="workers"],
+    .event-extra-info {
+        transition: none;
+    }
+}
+
+/* COMMUNITY PROTEST SUBMISSION */
+
+.submission-page {
+    min-height: 70vh;
+    padding: 45px 8%;
+}
+
+.submission-layout {
+    display: grid;
+    grid-template-columns: minmax(240px, 0.7fr) minmax(0, 1.3fr);
+    gap: 34px;
+    max-width: 1120px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.submission-intro {
+    padding: 18px 0;
+}
+
+.submission-intro h1 {
+    font-size: 38px;
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+.submission-intro > p:not(.eyebrow) {
+    color: #b5b5b5;
+    line-height: 1.8;
+}
+
+.review-note {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 28px;
+    padding: 20px;
+    background: #1c1f23;
+    border: 1px solid #30343a;
+    border-left: 3px solid #e63946;
+    border-radius: 8px;
+    color: #bdbdbd;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.review-note strong {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.submission-form-card {
+    background: #1c1f23;
+    border: 1px solid #30343a;
+    border-radius: 12px;
+    padding: 32px;
+}
+
+.form-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.form-heading .eyebrow {
+    margin-bottom: 10px;
+}
+
+.form-heading h2 {
+    font-size: 27px;
+}
+
+.form-intro,
+.field-help {
+    color: #929292;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.form-intro {
+    margin-bottom: 24px;
+}
+
+.form-intro span,
+.form-field > label > span {
+    color: #ff6666;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.form-field {
+    min-width: 0;
+}
+
+.form-field-full {
+    grid-column: 1 / -1;
+}
+
+.form-field > label {
+    display: block;
+    margin-bottom: 8px;
+    color: #d7d7d7;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    padding: 12px 13px;
+    background: #292d33;
+    border: 1px solid #41464e;
+    border-radius: 6px;
+    color: #ffffff;
+    font: inherit;
+}
+
+.form-field textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.6;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: #e63946;
+    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.16);
+}
+
+.form-field input:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.checkbox-field {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    margin-bottom: 0 !important;
+    color: #bdbdbd !important;
+    font-size: 12px !important;
+    font-weight: normal !important;
+}
+
+.checkbox-field input {
+    width: auto;
+    accent-color: #e63946;
+}
+
+.field-help {
+    margin-top: 7px;
+}
+
+.form-disclaimer {
+    margin: 24px 0 18px;
+    padding: 13px 15px;
+    background: #302124;
+    border-left: 3px solid #ff6666;
+    border-radius: 5px;
+    color: #ffc6c6;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.submission-form-card .primary-button {
+    border: 0;
+    cursor: pointer;
+    font: inherit;
+}
+
+.submission-form-card .primary-button:hover {
+    background: #f04754;
+}
+
+.form-message {
+    min-height: 20px;
+    margin-top: 14px;
+    color: #ffc107;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+@media (max-width: 850px) {
+    .submission-layout {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .submission-intro {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .submission-page {
+        padding: 25px 5%;
+    }
+
+    .submission-intro h1 {
+        font-size: 29px;
+    }
+
+    .submission-form-card {
+        padding: 22px;
+    }
+
+    .form-heading,
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-heading {
+        flex-direction: column;
+    }
+
+    .form-field-full {
+        grid-column: auto;
+    }
+}

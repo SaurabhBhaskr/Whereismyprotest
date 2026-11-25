@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a Protest | Whereismyprotest</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">✊ Whereismyprotest</div>
+
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}#explore">Explore Protests</a>
+            <a href="{{ url_for('home') }}#about">About</a>
+        </div>
+
+        <a href="{{ url_for('home') }}" class="nav-button">Back to Protests</a>
+    </nav>
+
+    <main class="submission-page">
+        <a href="{{ url_for('home') }}" class="back-link">← Back to all protests</a>
+
+        <div class="submission-layout">
+            <section class="submission-intro">
+                <p class="eyebrow">COMMUNITY SUBMISSION</p>
+                <h1>Share a protest happening in your community.</h1>
+                <p>
+                    Help people find public demonstrations by sharing clear, publicly available details.
+                    Every submission is pending admin verification before it can appear on the dashboard.
+                </p>
+
+                <div class="review-note">
+                    <strong>What happens next</strong>
+                    <span>1. You share public event information.</span>
+                    <span>2. Our team checks the details and source.</span>
+                    <span>3. Verified events may be published.</span>
+                </div>
+            </section>
+
+            <section class="submission-form-card">
+                <div class="form-heading">
+                    <div>
+                        <p class="eyebrow">EVENT DETAILS</p>
+                        <h2>Submit a Protest</h2>
+                    </div>
+                    <span class="pending">Pending verification</span>
+                </div>
+
+                <p class="form-intro">Fields marked with <span aria-hidden="true">*</span> are required.</p>
+
+                <form id="protestSubmissionForm" novalidate>
+                    <div class="form-grid">
+                        <div class="form-field form-field-full">
+                            <label for="title">Protest title <span>*</span></label>
+                            <input id="title" name="title" type="text" required placeholder="e.g. Save Our Local Park March">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="category">Category <span>*</span></label>
+                            <select id="category" name="category" required>
+                                <option value="" selected disabled>Select a category</option>
+                                <option>Education</option>
+                                <option>Environment</option>
+                                <option>Workers' Rights</option>
+                                <option>Farmers' Rights</option>
+                                <option>Social Justice</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="city">City / location <span>*</span></label>
+                            <input id="city" name="city" type="text" required placeholder="e.g. Patna, Bihar">
+                        </div>
+
+                        <div class="form-field form-field-full">
+                            <label for="venue">Venue or meeting point <span>*</span></label>
+                            <input id="venue" name="venue" type="text" required placeholder="e.g. Gandhi Maidan, main gate">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="date">Date <span>*</span></label>
+                            <input id="date" name="date" type="date" required>
+                            <label class="checkbox-field" for="dateToBeAnnounced">
+                                <input id="dateToBeAnnounced" name="date_to_be_announced" type="checkbox">
+                                <span>Date to be announced</span>
+                            </label>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="time">Start time</label>
+                            <input id="time" name="time" type="time">
+                            <p class="field-help">Leave blank if the time is not public yet.</p>
+                        </div>
+
+                        <div class="form-field form-field-full">
+                            <label for="description">What is the protest about? <span>*</span></label>
+                            <textarea id="description" name="description" rows="5" required placeholder="Briefly describe the issue, purpose, and any useful public information."></textarea>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="organizer">Public organizer name</label>
+                            <input id="organizer" name="organizer" type="text" placeholder="Organization, group, or organizer">
+                        </div>
+
+                        <div class="form-field">
+                            <label for="contact">Public contact information</label>
+                            <input id="contact" name="contact" type="text" placeholder="Public email, phone, or social handle">
+                            <p class="field-help">Only share contact details intended for public display.</p>
+                        </div>
+
+                        <div class="form-field form-field-full">
+                            <label for="source">Source or reference URL <span>*</span></label>
+                            <input id="source" name="source" type="url" required placeholder="https://example.org/event-announcement">
+                            <p class="field-help">Link to a public announcement, organizer page, or other supporting reference.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-disclaimer">
+                        This is a frontend demonstration only. Submitting this form does not save or send your information.
+                    </div>
+
+                    <button class="primary-button" type="submit">Submit for Verification →</button>
+                    <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer id="about">
+        <p>© 2026 Whereismyprotest. All rights reserved.</p>
+        <p class="creator-credit">An idea imagined and developed by <span>Saurabh Bhaskar and Team</span> ❤️</p>
+        <p>Discover. Participate. Make your voice heard.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/submit-protest.js') }}"></script>
+</body>
+</html>
